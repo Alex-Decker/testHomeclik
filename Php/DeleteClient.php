@@ -5,7 +5,8 @@ if (isset($_GET["id"])) {
     var_dump($_GET["id"]);
     $stmt = $dbh->prepare("DELETE FROM clients WHERE Id= ".$_GET["id"]);
     $stmt->execute();
-    header('Location: ../index.php');
+    //header('Location: ../index.php');
+    echo "<script> history.back();history.back();</script>";
 
     exit();
 

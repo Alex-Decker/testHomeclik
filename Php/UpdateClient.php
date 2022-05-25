@@ -14,7 +14,8 @@ if(isset($_POST["submit"]) && $_POST["submit"] != "enregistrer"){
         $stmt = $dbh->prepare("UPDATE clients SET Nom = '" . $Non . "', Prenom = '" . $Prenom . "', Address = '" . $Adresse . "', Telephone = '" . $Telephone . "', Date_rendezVous = '" . $Date_rendezVous . "' WHERE Id =" . $_POST["submit"]);
 
         $stmt->execute();
-        header('Location: ../Html/nouveauClient.php');
+        //header('Location: ../Html/nouveauClient.php');
+        echo "<script> history.back();history.back(); </script>";
 
         exit();
     }
