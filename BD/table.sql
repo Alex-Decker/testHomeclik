@@ -1,3 +1,4 @@
+// bdname :testHomelink
 CREATE TABLE IF NOT EXISTS Clients(
     Id int PRIMARY KEY AUTO_INCREMENT,
     Nom VARCHAR(15) NOT NULL ,
